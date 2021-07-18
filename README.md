@@ -7,6 +7,6 @@
 4. 置頂功能
 5. RWD
 
-## [DEMO](https://tommm2.github.io/js20-portfoilo/)
+## [DEMO](https://tommm2.github.io/js20-Portfoilo/)
 
 ![img](https://i.postimg.cc/mDFM0T9r/image.jpg)
