@@ -18,11 +18,9 @@ function setDate() {
   time.innerHTML = t;
 }
 
-
 setInterval(() => {
   setDate()
 }, 1000)
-
 
 // store image 、 link data
 function storeData() {
@@ -61,7 +59,7 @@ function updateDOM() {
     } else {
       project.style.backgroundImage = `url('${item.img}')`
       project.innerHTML = `
-        <div class="project-info">
+        <div class="project-info" onclick="">
           <a href="${item.github}" target="_blank">Github</a>
           <a href="${item.demo}" target="_blank">Demo</a>
         </div>
