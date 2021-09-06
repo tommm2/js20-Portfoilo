@@ -9,7 +9,7 @@ const time = document.getElementById('time')
 let data = []
 
 // set audio volume
-audio.volume = 0.4
+audio.volume = 0.8
 
 // Set date
 function setDate() {
