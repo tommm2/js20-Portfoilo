@@ -10,6 +10,6 @@
 4. 歌曲播放、暫停
 5. 置頂功能
 
-## [DEMO](https://tommm2.github.io/js20-Portfoilo/)
+## [DEMO](https://tommm2.github.io/js20-Portfoilo/JS-portfoilo/)
 
 ![img](https://i.postimg.cc/mDFM0T9r/image.jpg)
