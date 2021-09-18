@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.movie-container select {
+  background: #fff;
+  margin: 20px 0;
+  padding: 5px 15px 5px 15px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat.selected {
+  background: #6feaf6;
+}
+
+.seat.occupied {
+  background: #fff;
+}
+
+.seat {
+  background: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* 是针对具有一组兄弟节点的标签,来筛选出在一组兄弟节点的位置。 */
+.seat:nth-of-type(2) {
+  margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 20px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transition: .1s ease-in;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  transform: rotateX(-45deg);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
+
+#del-btn {
+  font-size: 15px;
+  padding: 10px;
+  display: block;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+  background: #444451;
+  border: 3px solid #777;
+  cursor: pointer;
+  transition: ease-out .3s;
+}
+
+#del-btn:hover {
+  transform: translateX(20px);
+  box-shadow: 5px 5px 10px #fff;
+}

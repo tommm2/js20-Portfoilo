@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Movie Seat Booking</title>
+</head>
+
+<body>
+  <h2>The movie booking</h2>
+  <div class="movie-container">
+    <label>選擇電影 :</label>
+    <select id="movie">
+      <option value="210">復仇者聯盟 : 終局之戰 (NT.210)</option>
+      <option value="120">蜘蛛人 : 離家日 (NT.120)</option>
+      <option value="80">超人 : 鋼鐵英雄 (NT.80)</option>
+      <option value="90">玩具總動員 4 (NT.90)</option>
+    </select>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <small>空位</small>
+    </li>
+    <li>
+      <div class="seat selected"></div>
+      <small>已選擇位置</small>
+    </li>
+    <li>
+      <div class="seat occupied"></div>
+      <small>位置已有人</small>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="screen"></div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+  </div>
+
+  <p class="text">你已選擇 <span id="count">0</span> 個座位，總共 <span id="total">0</span> 元
+  </p>
+
+  <button id="del-btn">清空所有座位</button>
+  <script src="script.js"></script>
+</body>
+
+</html>

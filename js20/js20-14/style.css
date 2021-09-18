@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right,#cfd9df, #e2ebf0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+h1 {
+  position: relative;
+}
+
+h1 button {
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+  z-index: 2;
+}
+
+.btn {
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+
+.btn-small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.btn-ghost {
+  border: 0;
+  background-color: transparent;
+  transform: scale(1);
+  transition: transform .2s ease-in;
+}
+
+.btn-ghost:hover {
+  transform: scale(1.4);
+}
+
+.clear {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.cards {
+  perspective: 1000px;
+  position: relative;
+  height: 300px;
+  width: 500px;
+  max-width: 100%;
+}
+
+.card {
+  position: absolute;
+  opacity: 0;
+  font-size: 1.5em;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(50%) rotateY(-10deg);
+  transition: transform .4s ease, opacity .4s ease;
+}
+
+.card.active {
+  cursor: pointer;
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
+}
+
+.inner-card {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .4s ease;
+}
+
+.card.show-answer .inner-card{
+  transform: rotateX(180deg);
+}
+
+.inner-card-front, .inner-card-back {
+  /* 指定当元素背面朝向观察者时是否可见。 */
+  backface-visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.inner-card-front {
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.inner-card-back {
+  transform: rotateX(180deg);
+
+}
+
+.inner-card-front::after, 
+.inner-card-back::after {
+  content: 'click to look answer';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.navigation {
+  display: flex;
+  margin: 20px 0;
+}
+
+.navigation .nav-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.navigation p {
+  margin: 0 25px;
+}
+
+.add-container {
+  opacity: 0;
+  z-index: -1;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  border-top: 2px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transition: .3s ease;
+}
+
+.add-container.show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.add-container h3 {
+  margin: 10px 0;
+}
+
+.add-container label {
+  display: block;
+  margin: 20px 0 10px;
+}
+
+.form-group textarea {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 12px;
+  width: 400px;
+}
+
+@media (max-width: 500px) {
+  h1 button {
+    right: 80%;
+    transform: translate(110%, -200%);
+  }
+  .cards {
+    width: 80%;
+  }
+  .form-group textarea{
+    width: 300px;
+  }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url('./images.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7)
+}
+
+body * {
+  z-index: 1;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.year {
+  font-weight: 700;
+  font-size: 150px;
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.countdown {
+  display: none;
+  transform: scale(1.5);
+}
+
+.time {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.time::after {
+  content: ':';
+  position: absolute;
+  right: -20px;
+  top: 25px;
+  font-weight: 800;
+}
+
+.time:nth-of-type(4)::after {
+  content: '';
+}
+
+.loading {
+  width: 150px
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 35px;
+  }
+  .countdown {
+    transform: scale(1.1);
+  }
+  .loading {
+    width: 100px;
+  }
+}
