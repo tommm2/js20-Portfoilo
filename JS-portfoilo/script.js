@@ -26,8 +26,8 @@ setInterval(() => {
 function storeData() {
   for(let i = 1; i <= 20; i++) {
     let prop = {
-      demo: `https://tommm2.github.io/js20-${i}/`,
-      github: `https://github.com/tommm2/js20-${i}`,
+      demo: `https://tommm2.github.io/js20-Portfoilo/js20/js20-${i}/`,
+      github: `https://github.com/tommm2/js20-Portfoilo/tree/master/js20/js20-${i}`,
       img: `./images/js20-${i}.JPG`
     }
     data.push(prop)
